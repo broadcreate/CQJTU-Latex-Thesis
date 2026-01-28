@@ -149,7 +149,9 @@
 \captionsetup{
   labelsep=space,
   font={small,bf},
-  textfont=small
+  textfont=small,
+  justification=centering,
+  singlelinecheck=false
 }
 \captionsetup[figure]{
   position=bottom,
@@ -200,6 +202,22 @@
 \newcommand\coverlogofile[1]{\def\@coverlogofile{#1}}
 \newcommand\@coverlogo{blue}
 \newcommand\@coverlogofile{}
+\newlength\cqjtuthesis@covertitlewidth
+\setlength{\cqjtuthesis@covertitlewidth}{12cm}
+\newcommand\cqjtuthesis@coverline{%
+  \vbox{\hrule width \cqjtuthesis@covertitlewidth height 0.4pt}%
+}
+\newcommand\cqjtuthesis@covertitlebox{%
+  \begingroup
+  % 统一使用单行模式，文字下面一条下划线
+  {\zihao{-3}\heiti\parbox{\cqjtuthesis@covertitlewidth}{%
+    \centering
+    \setlength{\ULdepth}{2pt}%
+    \renewcommand{\ULthickness}{0.4pt}%
+    \uline{\makebox[\cqjtuthesis@covertitlewidth][c]{\@ctitle}}%
+  }}%
+  \endgroup
+}
 \newcommand\makecover{
   \begin{titlepage}
     \thispagestyle{empty}
@@ -226,11 +244,8 @@
       % 题目
       \vspace{10pt}
       \begin{minipage}[c]{14cm}
-        \setlength{\baselineskip}{32pt}
-        {\zihao{-3}\heiti 题目：\uline{\hfill\@ctitle\hfill}}
-
-        \vspace{0.5cm}
-        \uline{\makebox[14cm][c]{}}
+        \centering
+        {\zihao{-3}\heiti 题目：\cqjtuthesis@covertitlebox}
       \end{minipage}
 
       \vfill
@@ -320,7 +335,7 @@
   \end{center}
   \vspace{12pt}
   \par\zihao{-4}\songti
-  \setlength{\baselineskip}{22pt}
+  \setstretch{1.5}
 }{\clearpage}
 
 \newcommand\ckeywords[1]{
@@ -340,7 +355,7 @@
   \end{center}
   \vspace{12pt}
   \par\zihao{-4}
-  \setlength{\baselineskip}{15pt}
+  \setstretch{1.5}
 }{\clearpage}
 
 \newcommand\ekeywords[1]{
@@ -387,6 +402,18 @@
   pdfsubject={重庆交通大学本科毕业论文},
   pdfkeywords={LaTeX, CQJTUThesis}
 }
+\setlist{topsep=6pt, itemsep=0pt, parsep=0pt, partopsep=0pt}
+\setlength{\floatsep}{10pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+\setlength{\abovedisplayskip}{10pt plus 2pt minus 2pt}
+\setlength{\belowdisplayskip}{10pt plus 2pt minus 2pt}
+\setlength{\abovedisplayshortskip}{6pt plus 2pt minus 2pt}
+\setlength{\belowdisplayshortskip}{6pt plus 2pt minus 2pt}
+\setlength{\emergencystretch}{1em}
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
 \linespread{1.5}
 \setlength{\parindent}{2em}
 \setlength{\parskip}{0pt}
