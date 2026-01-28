@@ -1,0 +1,46 @@
+% !TeX root = ../main.tex
+
+\chapter{程序代码}
+
+本附录给出研究中使用的主要程序代码。
+
+\section{Python示例代码}
+
+以下是一个简单的Python程序示例：
+
+\begin{verbatim}
+import numpy as np
+import matplotlib.pyplot as plt
+
+def calculate_result(x):
+    """计算函数值"""
+    return x**2 + 2*x + 1
+
+# 生成数据
+x = np.linspace(-10, 10, 100)
+y = calculate_result(x)
+
+# 绘制图形
+plt.plot(x, y)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Function Plot')
+plt.grid(True)
+plt.show()
+\end{verbatim}
+
+\section{算法伪代码}
+
+以下是一个算法的伪代码描述：
+
+\begin{verbatim}
+Algorithm: QuickSort(A, low, high)
+Input: Array A, indices low and high
+Output: Sorted array A
+
+1: if low < high then
+2:     pivot <- Partition(A, low, high)
+3:     QuickSort(A, low, pivot-1)
+4:     QuickSort(A, pivot+1, high)
+5: end if
+\end{verbatim}

@@ -1,0 +1,63 @@
+% !TeX encoding = UTF-8
+%% 重庆交通大学本科毕业论文 LaTeX 模板
+%% 使用前请先阅读 README.md 和用户手册
+%% Happy TeXing! :)
+%% =======================================================
+\documentclass{cqjtuthesis}
+
+% 定义封面信息
+\title{论文题目（不超过20个汉字）}
+\englishtitle{The Subject of Undergraduate Graduation Project (Thesis) of DJUT}
+\author{你的姓名}
+\studentid{你的学号}
+\school{你的学院}
+\major{你的专业}
+\cohort{20XX}
+\classnum{你的班级}
+\advisor{指导教师姓名}
+\completedate{2024年6月}
+\coverlogo{blue} % 可选：blue / red / legacy
+
+% 定义所有的图片文件在 figures 子目录下
+\graphicspath{{figures/}}
+
+% 正文开始
+\begin{document}
+
+% 封面
+\makecover
+
+% 成绩使用声明和版权授权书
+\makedeclaration
+
+% 前置部分
+\frontmatter
+
+% 中文摘要
+\input{contents/abstract}
+
+% 目录
+\tableofcontents
+
+% 正文部分
+\mainmatter
+
+% 各章节内容
+\include{contents/chapter01}
+\include{contents/chapter02}
+\include{contents/conclusion}
+
+% 后置部分
+\backmatter
+
+% 参考文献
+\bibliography{ref/refs}
+
+% 致谢
+\input{contents/thanks}
+
+% 附录
+\appendix
+\input{contents/appendix}
+
+\end{document}

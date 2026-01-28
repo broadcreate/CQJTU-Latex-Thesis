@@ -1,0 +1,81 @@
+% !TeX root = ../main.tex
+
+\chapter{建议及公式的书写规则}
+
+本章介绍论文中建议、公式等内容的书写规范。
+
+\section{建议内容说明}
+
+建议类论文的大体构成如下：
+
+\subsection{基于技术研发性的课题}
+
+内容需包括背景，要解决的实际现实问题，解决方法，解决所需工具，论据。图、表，实验数据，成果应用等。
+
+\subsection{基于数据分析性的课题}
+
+内容需包括数据背景，要解决的实际现实问题，解决所采用的工具和方法，论据、图、表，实验数据，分析成果应用。
+
+\subsection{基于理论研究性的课题}
+
+内容包括研究背景、前人研究理论梳理、研究方法、研究论据，结论等。
+
+\section{公式的书写规则}
+
+\subsection{一般公式}
+
+公式应另起一行书写，并居中排列。公式序号应用圆括号括起，靠公式右侧标注。
+
+简单的公式可在正文中书写，如：$a^2 + b^2 = c^2$。
+
+\subsection{多行公式}
+
+较长的公式，最好在等号或运算符号处转换，转换处用"="或运算符号标示，示例如下：
+
+\begin{align}
+  (a + b)^2 &= a^2 + 2ab + b^2 \notag \\
+            &= a^2 + b^2 + 2ab \label{eq:multiline}
+\end{align}
+
+\subsection{公式组}
+
+对于多个相关的公式，可以使用公式组：
+
+\begin{subequations}\label{eq:group}
+\begin{align}
+  x &= r\cos\theta \\
+  y &= r\sin\theta
+\end{align}
+\end{subequations}
+
+引用公式组时为：公式\eqref{eq:group}。
+
+\section{常用数学符号}
+
+\subsection{希腊字母}
+
+常用的希腊字母包括：$\alpha$, $\beta$, $\gamma$, $\delta$, $\epsilon$, $\theta$, $\lambda$, $\mu$, $\pi$, $\sigma$, $\omega$ 等。
+
+\subsection{数学运算符}
+
+\begin{itemize}
+  \item 求和：$\sum_{i=1}^{n} x_i$
+  \item 连乘：$\prod_{i=1}^{n} x_i$
+  \item 积分：$\int_{a}^{b} f(x)\,dx$
+  \item 极限：$\lim_{x \to \infty} f(x)$
+  \item 偏导数：$\frac{\partial f}{\partial x}$
+\end{itemize}
+
+\subsection{矩阵和向量}
+
+矩阵示例：
+
+\begin{equation}
+  \mathbf{A} = \begin{bmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}
+  \end{bmatrix}
+\end{equation}
+
+向量示例：$\mathbf{v} = (v_1, v_2, v_3)^T$。
