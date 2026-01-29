@@ -218,8 +218,10 @@
 ## 文件结构
 
 ```
-cqjtuthesis/
+CQJTU-Latex-Thesis/
 ├── cqjtuthesis.cls              # 模板类文件（核心）
+├── cqjtuthesis.dtx              # 文档化源文件
+├── cqjtuthesis.ins              # 安装脚本
 │
 ├── main.tex                     # 本科论文主文件示例
 ├── main_master.tex              # 学术硕士论文主文件示例
@@ -250,10 +252,17 @@ cqjtuthesis/
 ├── ref/                         # 参考文献
 │   └── refs.bib                # BibTeX数据库
 │
+├── README                       # 英文说明
+├── README.md                    # 中文详细说明
+├── LICENSE                      # 许可证
+├── CHANGELOG.md                 # 版本记录
 ├── USAGE_GUIDE.md              # 使用指南（本文件）
 ├── CONTENTS_README.md          # 示例内容说明
-├── FORMAT_REQUIREMENTS.md      # 本科格式要求
-└── FORMAT_REQUIREMENTS_GRADUATE.md  # 研究生格式要求
+├── DOCS_INDEX.md               # 文档索引
+├── MANIFEST-CTAN.txt           # CTAN上传清单
+├── Makefile                     # Linux/Mac构建脚本
+├── makewin.bat                  # Windows构建脚本
+└── clean-for-ctan.bat          # CTAN打包清理脚本
 ```
 
 ### 示例文件对照表
@@ -536,10 +545,9 @@ xelatex main_master.tex
 ## 更多信息
 
 ### 相关文档
-
-- **本科格式要求**: `FORMAT_REQUIREMENTS.md`
-- **研究生格式要求**: `FORMAT_REQUIREMENTS_GRADUATE.md`
+ 
 - **示例内容说明**: `CONTENTS_README.md`
+- **官方格式要求**: 请参考项目目录下的官方PDF/Word文件
 
 ### 技术支持
 

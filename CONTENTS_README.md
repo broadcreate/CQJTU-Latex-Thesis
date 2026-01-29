@@ -5,7 +5,7 @@
 ## 目录结构
 
 ```
-cqjtuthesis/
+CQJTU-Latex-Thesis/
 ├── contents/              # 本科生示例内容
 │   ├── abstract.tex      # 摘要
 │   ├── chapter01.tex     # 第一章
@@ -14,7 +14,7 @@ cqjtuthesis/
 │   ├── thanks.tex        # 致谢
 │   └── appendix.tex      # 附录
 │
-└── contents_graduate/     # 研究生示例内容（新增）
+└── contents_graduate/     # 研究生示例内容
     ├── abstract.tex      # 摘要（含格式说明）
     ├── chapter01.tex     # 第一章（含格式说明）
     ├── chapter02.tex     # 第二章（含公式示例）

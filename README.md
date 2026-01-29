@@ -90,8 +90,10 @@ latexmk -xelatex main_master.tex
 ## 📁 文件结构
 
 ```
-cqjtuthesis/
+CQJTU-Latex-Thesis/
 ├── cqjtuthesis.cls              # 模板类文件（核心）
+├── cqjtuthesis.dtx              # 文档化源文件
+├── cqjtuthesis.ins              # 安装脚本
 │
 ├── main.tex                     # 本科论文示例
 ├── main_master.tex              # 学术硕士论文示例
@@ -101,12 +103,18 @@ cqjtuthesis/
 ├── contents/                    # 本科论文内容
 │   ├── abstract.tex
 │   ├── chapter01.tex
-│   └── ...
+│   ├── chapter02.tex
+│   ├── conclusion.tex
+│   ├── thanks.tex
+│   └── appendix.tex
 │
 ├── contents_graduate/           # 研究生论文内容
 │   ├── abstract.tex            # 含格式说明
 │   ├── chapter01.tex           # 含格式说明
-│   └── ...
+│   ├── chapter02.tex
+│   ├── conclusion.tex
+│   ├── thanks.tex
+│   └── appendix.tex
 │
 ├── figures/                     # 图片文件夹
 │   ├── cqjtu-logo-blue.png     # 蓝色校徽
@@ -116,11 +124,17 @@ cqjtuthesis/
 ├── ref/
 │   └── refs.bib                # 参考文献库
 │
-├── README.md                    # 本文件
+├── README                       # 英文说明
+├── README.md                    # 中文详细说明（本文件）
+├── LICENSE                      # 许可证
+├── CHANGELOG.md                 # 版本记录
 ├── USAGE_GUIDE.md              # 详细使用指南
 ├── CONTENTS_README.md          # 示例内容说明
-├── FORMAT_REQUIREMENTS.md      # 本科格式要求
-└── FORMAT_REQUIREMENTS_GRADUATE.md  # 研究生格式要求
+├── DOCS_INDEX.md               # 文档索引
+├── MANIFEST-CTAN.txt           # CTAN上传清单
+├── Makefile                     # Linux/Mac构建脚本
+├── makewin.bat                  # Windows构建脚本
+└── clean-for-ctan.bat          # CTAN打包清理脚本
 ```
 
 ---
@@ -308,8 +322,8 @@ xelatex main_master.tex    # 第3次：确保所有引用正确
 | `README.md` | 快速开始（本文件） |
 | `USAGE_GUIDE.md` | 详细使用指南 |
 | `CONTENTS_README.md` | 示例内容说明 |
-| `FORMAT_REQUIREMENTS.md` | 本科格式要求 |
-| `FORMAT_REQUIREMENTS_GRADUATE.md` | 研究生格式要求 |
+| `DOCS_INDEX.md` | 文档索引 |
+| 官方格式文件 | 包含在项目目录中（PDF/Word） |
 
 ---
 
@@ -317,9 +331,11 @@ xelatex main_master.tex    # 第3次：确保所有引用正确
 
 欢迎提出问题和建议！
 
+- **GitHub 仓库**: https://github.com/broadcreate/CQJTU-Latex-Thesis
 - **问题反馈**: 提交 Issue
 - **功能建议**: 提交 Pull Request
 - **使用交流**: 欢迎分享使用经验
+- **邮箱**: 5726559@qq.com
 
 ---
 
