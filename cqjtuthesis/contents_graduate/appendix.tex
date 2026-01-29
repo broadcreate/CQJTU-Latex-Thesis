@@ -1,0 +1,84 @@
+% 附录 - 研究生论文
+% ==========================================
+
+\begin{appendix}
+\chapter{实验数据统计表}
+
+本附录给出了实验中使用的主要数据集统计信息。
+
+\section{交通流量数据集统计}
+
+\begin{table}[htbp]
+  \centering
+  \caption{交通流量数据集基本信息}
+  \begin{tabular}{lcccc}
+    \toprule
+    数据集 & 采集地点 & 时间跨度 & 数据量 & 采样间隔 \\
+    \midrule
+    Dataset-1 & 观音桥路口 & 2023.01-2023.06 & 26,280条 & 5分钟 \\
+    Dataset-2 & 解放碑路口 & 2023.01-2023.06 & 26,280条 & 5分钟 \\
+    Dataset-3 & 沙坪坝路口 & 2023.01-2023.06 & 26,280条 & 5分钟 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{模型参数配置}
+
+\begin{table}[htbp]
+  \centering
+  \caption{CNN-LSTM模型参数设置}
+  \begin{tabular}{ll}
+    \toprule
+    参数名称 & 参数值 \\
+    \midrule
+    CNN卷积核大小 & $3\times 3$ \\
+    CNN卷积核数量 & 64 \\
+    LSTM隐藏层单元数 & 128 \\
+    学习率 & 0.001 \\
+    批量大小 & 32 \\
+    训练轮数 & 100 \\
+    优化器 & Adam \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{DQN算法参数设置}
+  \begin{tabular}{ll}
+    \toprule
+    参数名称 & 参数值 \\
+    \midrule
+    状态空间维度 & 12 \\
+    动作空间维度 & 8 \\
+    经验回放缓冲区大小 & 10,000 \\
+    目标网络更新频率 & 100 \\
+    折扣因子$\gamma$ & 0.99 \\
+    探索率$\epsilon$ & 0.1 \\
+    学习率 & 0.0001 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\chapter{部分实验结果图表}
+
+\section{训练过程可视化}
+
+本节展示了模型训练过程中损失函数和评价指标的变化曲线。
+
+% 注：实际使用时需要插入相应的图片
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{figures/training_loss.png}
+%   \caption{训练损失曲线}
+% \end{figure}
+
+\section{预测结果对比}
+
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{figures/prediction_comparison.png}
+%   \caption{不同方法的预测结果对比}
+% \end{figure}
+
+\end{appendix}

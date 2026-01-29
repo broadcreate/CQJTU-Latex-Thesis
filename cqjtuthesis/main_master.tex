@@ -1,0 +1,69 @@
+% !TeX encoding = UTF-8
+%% 重庆交通大学硕士学位论文 LaTeX 模板示例
+%% =======================================================
+\documentclass[degree=master]{cqjtuthesis}
+
+% 定义封面信息
+\title{论文题目（一号宋体）}
+\englishtitle{Research on Intelligent Transportation System Optimization Based on Deep Learning}
+\author{（小三号黑体）}
+\studentid{2022xxxxxx}
+\school{交通运输学院}
+\major{交通运输工程}
+\advisor{（小三号黑体）}
+\completedate{2024年6月}
+
+% 研究生论文额外字段
+\clc{U491}  % 分类号
+% \securitylevel{保密}  % 密级（如需要）
+\discipline{交通运输工程}  % 一级学科
+\subdiscipline{交通信息工程及控制}  % 二级学科
+\degreecategory{硕士学位}  % 申请学位类别
+\submitdate{2024年5月15日}  % 论文提交日期
+\defenddate{2024年5月20日}  % 论文答辩日期
+
+\coverlogo{blue}
+
+% 定义所有的图片文件在 figures 子目录下
+\graphicspath{{figures/}}
+
+% 正文开始
+\begin{document}
+
+% 封面
+\makecover
+
+% 声明和版权授权书
+\makedeclaration
+
+% 前置部分
+\frontmatter
+
+% 中文摘要
+\input{contents_graduate/abstract}
+
+% 目录
+\tableofcontents
+
+% 正文部分
+\mainmatter
+
+% 各章节内容  
+\include{contents_graduate/chapter01}
+\include{contents_graduate/chapter02}
+\include{contents_graduate/conclusion}
+
+% 后置部分
+\backmatter
+
+% 参考文献
+\bibliography{ref/refs}
+
+% 致谢
+\input{contents_graduate/thanks}
+
+% 附录
+\appendix
+\input{contents_graduate/appendix}
+
+\end{document}

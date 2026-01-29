@@ -1,0 +1,42 @@
+% 研究生论文中文摘要示例
+% ==========================================
+% 格式说明：
+% - 标题"摘要"：三号黑体，居中，字间距为两个空格
+% - 正文：小四号宋体，首行缩进2字符，行距20磅（固定值）
+% - 关键词：小四号黑体"关键词："+ 小四号宋体正文，用分号分隔
+% ==========================================
+
+\begin{cabstract}
+本文针对智能交通系统优化问题，提出了一种基于深度学习的交通流量预测与优化方法。通过构建多层神经网络模型，实现了对城市道路网络交通流量的准确预测，并结合强化学习算法优化信号灯控制策略。
+
+研究首先收集了重庆市主城区典型路段的交通流量数据，建立了包含时空特征的交通数据集。在此基础上，设计了融合卷积神经网络（CNN）和长短期记忆网络（LSTM）的混合深度学习模型，用于捕捉交通流的时空演化规律。实验结果表明，该模型在短期交通流预测任务中的平均绝对误差（MAE）降低了23.5\%，均方根误差（RMSE）降低了18.7\%。
+
+进一步，本文将交通信号控制问题建模为马尔可夫决策过程（MDP），采用深度Q网络（DQN）算法学习最优控制策略。仿真实验显示，与传统固定配时方案相比，基于DQN的自适应信号控制使平均车辆延误时间减少了31.2\%，路网通行能力提升了24.6\%。
+
+本研究为智能交通系统的优化提供了新的技术路径，具有重要的理论意义和应用价值。
+
+% 关键词格式说明：
+% - "关键词："三个字用小四号黑体
+% - 关键词用小四号宋体，用分号"；"分隔，最后一个关键词后不加标点
+\ckeywords{智能交通系统；深度学习；交通流量预测；信号灯优化；强化学习}
+\end{cabstract}
+
+% 英文摘要示例
+% ==========================================
+% 格式说明：
+% - 标题"ABSTRACT"：三号黑体（或Times New Roman），居中
+% - 正文：小四号Times New Roman，首行缩进2字符，行距20磅
+% - 关键词：小四号加粗"KEY WORDS："+ 小四号Times New Roman
+% ==========================================
+
+\begin{eabstract}
+This thesis addresses the optimization problem of intelligent transportation systems by proposing a deep learning-based traffic flow prediction and optimization method. Through the construction of a multi-layer neural network model, accurate prediction of traffic flow in urban road networks is achieved, and reinforcement learning algorithms are combined to optimize traffic signal control strategies.
+
+The research first collected traffic flow data from typical road sections in the main urban area of Chongqing and established a traffic dataset containing spatiotemporal features. On this basis, a hybrid deep learning model integrating Convolutional Neural Networks (CNN) and Long Short-Term Memory networks (LSTM) was designed to capture the spatiotemporal evolution patterns of traffic flow. Experimental results show that the model reduces the Mean Absolute Error (MAE) by 23.5\% and the Root Mean Square Error (RMSE) by 18.7\% in short-term traffic flow prediction tasks.
+
+Furthermore, this thesis models the traffic signal control problem as a Markov Decision Process (MDP) and employs the Deep Q-Network (DQN) algorithm to learn optimal control strategies. Simulation experiments demonstrate that compared to traditional fixed-time schemes, DQN-based adaptive signal control reduces average vehicle delay by 31.2\% and increases network capacity by 24.6\%.
+
+This research provides a new technical approach for the optimization of intelligent transportation systems, with significant theoretical and practical value.
+
+\ekeywords{Intelligent Transportation System; Deep Learning; Traffic Flow Prediction; Signal Optimization; Reinforcement Learning}
+\end{eabstract}
