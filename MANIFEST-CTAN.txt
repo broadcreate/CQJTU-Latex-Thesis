@@ -19,13 +19,13 @@ Author:
 CQJTU-Latex-Thesis Development Team
 
 Home Page:
-https://github.com/yourusername/CQJTU-Latex-Thesis
+https://github.com/broadcreate/CQJTU-Latex-Thesis
 
 Repository:
-https://github.com/yourusername/CQJTU-Latex-Thesis
+https://github.com/broadcreate/CQJTU-Latex-Thesis
 
 Bug Tracker:
-https://github.com/yourusername/CQJTU-Latex-Thesis/issues
+https://github.com/broadcreate/CQJTU-Latex-Thesis/issues
 
 Required Packages:
 - kvoptions
@@ -75,7 +75,7 @@ Documentation (English):
 - README                 Quick start guide
 
 Documentation (Chinese):
-- README.md              详细说明文档
+- README.md              详细说明文档（含英文摘要）
 - USAGE_GUIDE.md         使用指南
 - CONTENTS_README.md     示例内容说明
 - DOCS_INDEX.md          文档索引
@@ -101,6 +101,7 @@ Example Content (Graduate):
 - contents_graduate/conclusion.tex
 - contents_graduate/thanks.tex
 - contents_graduate/appendix.tex
+- contents_graduate/achievements.tex
 
 Bibliography:
 - ref/refs.bib
@@ -113,18 +114,24 @@ Graphics:
 Build Scripts:
 - Makefile               Linux/Mac build script
 - makewin.bat            Windows build script
+- clean-for-ctan.bat      CTAN cleanup helper
 
 License:
 - LICENSE                LPPL 1.3c license text
+
+Package Metadata:
+- CHANGELOG.md           Version history
+- MANIFEST-CTAN.txt       This manifest
 
 Notes for CTAN:
 ===============
 
 1. This package requires XeLaTeX for compilation
 2. Chinese fonts (SimSun, SimHei, KaiTi) are required
-3. The package is primarily documented in Chinese
-4. An English README is provided for international users
+3. The package is primarily documented in Chinese, with an English README
+4. README.md includes an English summary for CTAN display
 5. This is version 1.0, the initial release
+6. Official university documents and non-ASCII paths are excluded from CTAN upload
 
 Suggested CTAN Path:
 macros/latex/contrib/cqjtuthesis

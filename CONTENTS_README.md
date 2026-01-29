@@ -20,7 +20,8 @@ CQJTU-Latex-Thesis/
     ├── chapter02.tex     # 第二章（含公式示例）
     ├── conclusion.tex    # 总结与展望
     ├── thanks.tex        # 致谢
-    └── appendix.tex      # 附录
+    ├── appendix.tex      # 附录
+    └── achievements.tex  # 攻读学位期间取得的研究成果
 ```
 
 ## 研究生示例内容特点

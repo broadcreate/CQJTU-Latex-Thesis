@@ -8,6 +8,28 @@
 
 ---
 
+## English Summary
+
+CQJTU-Latex-Thesis is a LaTeX thesis template for Chongqing Jiaotong University (CQJTU). It supports
+bachelor's, academic master's, professional master's, and doctoral theses, and follows the official
+format requirements.
+
+Quick start:
+- Choose the main file: `main.tex` (bachelor), `main_master.tex`, `main_professional.tex`, `main_doctor.tex`
+- Compile (XeLaTeX required): `latexmk -xelatex main_master.tex`
+
+Requirements:
+- TeX Live 2025 or later
+- XeLaTeX
+- Chinese fonts: SimSun, SimHei, KaiTi
+
+More details (English): see `README` in the project root.
+
+GitHub: https://github.com/broadcreate/CQJTU-Latex-Thesis  
+Email: 5726559@qq.com
+
+---
+
 ## 📖 模板简介
 
 **CQJTU-Latex-Thesis** 是重庆交通大学学位论文的 LaTeX 模板，支持：
