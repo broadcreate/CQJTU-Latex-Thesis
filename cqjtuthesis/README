@@ -1,0 +1,161 @@
+# cqjtuthesis
+
+LaTeX thesis template for Chongqing Jiaotong University (CQJTU)
+
+## Description
+
+`cqjtuthesis` is a LaTeX document class for typesetting theses at Chongqing Jiaotong University. It supports:
+
+- Bachelor's thesis
+- Academic Master's thesis
+- Professional Master's thesis
+- Doctoral dissertation
+
+The template strictly follows the official formatting requirements:
+- Bachelor: "CQJTU Undergraduate Thesis Template" (2024 Edition)
+- Graduate: "CQJTU Graduate Thesis Formatting Requirements" (2013 Revised Edition)
+
+## Features
+
+- Complete formatting according to university requirements (120+ format checks passed)
+- Automatic generation of cover pages, declaration pages, abstracts, table of contents, and bibliography
+- Support for different thesis types with conditional formatting
+- Cross-platform support (Windows, Linux, macOS)
+- Comprehensive documentation and examples
+
+## System Requirements
+
+- TeX distribution: TeX Live 2025 or later
+- Compiler: XeLaTeX (required)
+- Chinese fonts: SimSun, SimHei, KaiTi
+
+## Installation
+
+### From CTAN (Recommended)
+
+```bash
+# Will be available after CTAN upload
+tlmgr install cqjtuthesis
+```
+
+### Manual Installation
+
+1. Download the package from CTAN or GitHub
+2. Extract files to your working directory
+3. Compile your thesis using the provided templates
+
+## Usage
+
+### Quick Start
+
+Choose the appropriate template file:
+
+```latex
+% Bachelor's thesis
+\documentclass{cqjtuthesis}
+
+% Master's thesis (academic)
+\documentclass[degree=master]{cqjtuthesis}
+
+% Master's thesis (professional)
+\documentclass[degree=master, degree-type=professional]{cqjtuthesis}
+
+% Doctoral dissertation
+\documentclass[degree=doctor]{cqjtuthesis}
+```
+
+### Example Files
+
+- `main.tex` - Bachelor's thesis example
+- `main_master.tex` - Academic Master's thesis example
+- `main_professional.tex` - Professional Master's thesis example
+- `main_doctor.tex` - Doctoral dissertation example
+
+### Compilation
+
+```bash
+xelatex main_master.tex
+bibtex main_master
+xelatex main_master.tex
+xelatex main_master.tex
+```
+
+Or use latexmk:
+
+```bash
+latexmk -xelatex main_master.tex
+```
+
+## Documentation
+
+- `README.md` - Quick start guide (Chinese)
+- `USAGE_GUIDE.md` - Detailed user manual (Chinese)
+- `CONTENTS_README.md` - Sample content guide (Chinese)
+
+## File Structure
+
+```
+cqjtuthesis/
+├── cqjtuthesis.cls          # Document class file
+├── cqjtuthesis.dtx          # Documented source
+├── cqjtuthesis.ins          # Installation script
+├── main*.tex                # Example files
+├── contents/                # Bachelor's thesis content
+├── contents_graduate/       # Graduate thesis content
+├── figures/                 # Logo files
+├── ref/                     # Bibliography
+└── documentation files
+```
+
+## License
+
+This work may be distributed and/or modified under the conditions of the LaTeX Project Public License, either version 1.3c of this license or (at your option) any later version.
+
+The latest version of this license is in:
+  http://www.latex-project.org/lppl.txt
+and version 1.3c or later is part of all distributions of LaTeX version 2008 or later.
+
+This work has the LPPL maintenance status "maintained".
+
+The Current Maintainer of this work is the CQJTU-Latex-Thesis Development Team.
+
+This work consists of the files:
+- cqjtuthesis.cls
+- cqjtuthesis.dtx
+- cqjtuthesis.ins
+- README.md
+- USAGE_GUIDE.md
+- and example files
+
+## Author
+
+CQJTU-Latex-Thesis Development Team
+
+## Repository
+
+https://github.com/yourusername/CQJTU-Latex-Thesis
+
+## Bug Reports
+
+Please report bugs at:
+https://github.com/yourusername/CQJTU-Latex-Thesis/issues
+
+## Acknowledgements
+
+This template is inspired by:
+- ThuThesis (Tsinghua University)
+- CQUThesis (Chongqing University)
+- CTeX
+
+Thanks to Chongqing Jiaotong University for providing the official formatting requirements.
+
+## Version History
+
+- v1.0 (2026-01-29): Initial release
+  - Support for Bachelor's, Master's (academic/professional), and Doctoral theses
+  - Complete formatting according to official requirements
+  - Comprehensive documentation and examples
+
+---
+
+**Note**: This is an **unofficial** template. Users should verify that the formatting meets the latest university requirements before submission.
