@@ -22,7 +22,7 @@
 %% 
 \NeedsTeXFormat{LaTeX2e}[2020/10/01]
 \ProvidesClass{cqjtuthesis}
-    [2024/01/28 v1.0 Chongqing Jiaotong University Thesis Template]
+    [2026/02/02 v1.0.1 Chongqing Jiaotong University Thesis Template]
 
 % 学位类型选项处理
 \RequirePackage{kvoptions}

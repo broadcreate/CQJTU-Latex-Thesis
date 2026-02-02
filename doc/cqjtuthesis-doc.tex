@@ -1,0 +1,239 @@
+\documentclass[a4paper,12pt]{ctexart}
+\usepackage[top=2.5cm,bottom=2.5cm,left=3cm,right=2.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10},
+    keywordstyle=\color{blue},
+    stringstyle=\color{red}
+}
+
+\title{\textbf{CQJTU-Latex-Thesis 使用指南}}
+\author{CQJTUThesis Development Team}
+\date{v1.0.1 (2026-02-02)}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{简介}
+
+重庆交通大学学位论文 LaTeX 模板，支持本科、硕士（学术型/专业型）、博士论文。
+
+\begin{itemize}
+    \item \textbf{版本}: v1.0.1
+    \item \textbf{更新日期}: 2026-02-02
+    \item \textbf{编译环境}: XeLaTeX + TeX Live 2020+
+\end{itemize}
+
+\textbf{格式要求参考}:
+\begin{itemize}
+    \item 本科论文：《重庆交通大学本科毕业论文（设计）模板》（2024年版）
+    \item 研究生论文：《重庆交通大学研究生学位论文格式要求》（2013年修订版）
+\end{itemize}
+
+\section{快速开始}
+
+\subsection{本科毕业论文}
+
+\textbf{使用示例文件}: \texttt{examples/cqjtuthesis-bachelor.tex}
+
+\begin{lstlisting}[language=TeX]
+\documentclass{../tex/cqjtuthesis}  % 默认为本科模式
+% 或显式指定
+\documentclass[degree=bachelor]{../tex/cqjtuthesis}
+\end{lstlisting}
+
+\textbf{内容目录}: \texttt{examples/contents/} \\
+\textbf{编译命令}: \texttt{cd examples \&\& xelatex cqjtuthesis-bachelor.tex}
+
+\subsection{学术型硕士学位论文}
+
+\textbf{使用示例文件}: \texttt{examples/cqjtuthesis-master.tex}
+
+\begin{lstlisting}[language=TeX]
+\documentclass[degree=master]{../tex/cqjtuthesis}  % 默认为学术型
+% 或显式指定
+\documentclass[degree=master, degree-type=academic]{../tex/cqjtuthesis}
+\end{lstlisting}
+
+\textbf{内容目录}: \texttt{examples/contents-graduate/} \\
+\textbf{编译命令}: \texttt{cd examples \&\& xelatex cqjtuthesis-master.tex}
+
+\subsection{专业型硕士学位论文}
+
+\textbf{使用示例文件}: \texttt{examples/cqjtuthesis-professional.tex}
+
+\begin{lstlisting}[language=TeX]
+\documentclass[degree=master, degree-type=professional]{../tex/cqjtuthesis}
+\end{lstlisting}
+
+\textbf{内容目录}: \texttt{examples/contents-graduate/} \\
+\textbf{编译命令}: \texttt{cd examples \&\& xelatex cqjtuthesis-professional.tex}
+
+\subsection{博士学位论文}
+
+\textbf{使用示例文件}: \texttt{examples/cqjtuthesis-doctor.tex}
+
+\begin{lstlisting}[language=TeX]
+\documentclass[degree=doctor]{../tex/cqjtuthesis}
+\end{lstlisting}
+
+\textbf{内容目录}: \texttt{examples/contents-graduate/} \\
+\textbf{编译命令}: \texttt{cd examples \&\& xelatex cqjtuthesis-doctor.tex}
+
+\section{选项说明}
+
+\subsection{类选项}
+
+\begin{longtable}{llll}
+\toprule
+选项 & 可选值 & 默认值 & 说明 \\
+\midrule
+\texttt{degree} & \texttt{bachelor} / \texttt{master} / \texttt{doctor} & \texttt{bachelor} & 学位类型 \\
+\texttt{degree-type} & \texttt{academic} / \texttt{professional} & \texttt{academic} & 学位类别 \\
+\bottomrule
+\end{longtable}
+
+\subsection{校徽选项}
+
+\begin{tabular}{ll}
+\toprule
+选项 & 说明 \\
+\midrule
+\texttt{\textbackslash coverlogo\{blue\}} & 蓝色校徽（推荐） \\
+\texttt{\textbackslash coverlogo\{red\}} & 红色校徽 \\
+\texttt{\textbackslash coverlogo\{legacy\}} & 旧版校徽 \\
+\bottomrule
+\end{tabular}
+
+\section{主要格式区别}
+
+\subsection{页面设置}
+
+\begin{tabular}{lll}
+\toprule
+项目 & 本科论文 & 研究生论文 \\
+\midrule
+纸张 & A4 & A4 \\
+上边距 & 2.5cm & 3.0cm \\
+下边距 & 2.0cm & 2.5cm \\
+左边距 & 3.0cm & 3.0cm \\
+右边距 & 2.0cm & 3.0cm \\
+装订线 & 无 & 0.5cm \\
+\bottomrule
+\end{tabular}
+
+\subsection{摘要与目录}
+
+\begin{tabular}{lll}
+\toprule
+项目 & 本科 & 研究生 \\
+\midrule
+摘要标题 & “摘 要”（小三号黑体） & “摘  要”（三号黑体，2空格） \\
+摘要正文 & 小四号宋体，1.5倍行距 & 小四号宋体，20磅固定行距 \\
+\bottomrule
+\end{tabular}
+
+\section{封面信息定义}
+
+\subsection{基本信息（所有学位类型）}
+
+\begin{lstlisting}[language=TeX]
+\title{论文题目}
+\englishtitle{English Title}
+\author{你的姓名}
+\studentid{你的学号}
+\school{你的学院}
+\major{你的专业}
+\advisor{指导教师姓名 职称}
+\completedate{2024年6月}
+\coverlogo{blue}
+\end{lstlisting}
+
+\subsection{本科生额外字段}
+
+\begin{lstlisting}[language=TeX]
+\cohort{20XX}                  % 届别，如2024
+\classnum{你的班级}             % 班级号
+\end{lstlisting}
+
+\subsection{研究生额外字段}
+
+\begin{lstlisting}[language=TeX]
+\clc{U491}                     % 分类号
+\securitylevel{保密}            % 密级
+\discipline{交通运输工程}       % 一级学科
+\subdiscipline{交通信息工程及控制}  % 二级学科
+\degreecategory{硕士学位}       % 申请学位类别
+\submitdate{2024年5月15日}     % 论文提交日期
+\defenddate{2024年5月20日}     % 论文答辩日期
+\end{lstlisting}
+
+\section{文件结构}
+
+\begin{lstlisting}
+cqjtuthesis/
+├── README.md                    # 说明文件
+├── tex/                         # TeX运行时文件
+│   └── cqjtuthesis.cls         # 模板类文件
+├── doc/                         # 文档
+│   ├── cqjtuthesis-doc-zh.md   # 中文使用指南
+│   └── cqjtuthesis-doc.tex     # PDF文档源码
+└── examples/                    # 示例文件
+    ├── cqjtuthesis-bachelor.tex
+    ├── cqjtuthesis-master.tex
+    ├── cqjtuthesis-professional.tex
+    ├── cqjtuthesis-doctor.tex
+    ├── contents/                # 本科内容
+    ├── contents-graduate/       # 研究生内容
+    └── figures/                 # 图片文件夹
+\end{lstlisting}
+
+\section{使用步骤}
+
+\begin{enumerate}
+    \item \textbf{选择正确的模板文件}：根据学位类型选择对应的 \texttt{.tex} 文件。
+    \item \textbf{修改封面信息}：修改 \texttt{\textbackslash title}, \texttt{\textbackslash author} 等信息。
+    \item \textbf{修改示例内容}：本修改 \texttt{contents/} 或 \texttt{contents-graduate/} 下的源文件。
+    \item \textbf{添加参考文献}：在 \texttt{examples/bibliography/cqjtuthesis-refs.bib} 中添加。
+    \item \textbf{编译生成PDF}：推荐使用 \texttt{latexmk} 或反复执行 \texttt{xelatex -> bibtex -> xelatex -> xelatex}。
+\end{enumerate}
+
+\section{常见问题}
+
+\textbf{Q: 如何切换学位类型？} \\
+A: 修改 \texttt{\textbackslash documentclass} 的 \texttt{degree} 选项。
+
+\textbf{Q: 论文题目太长怎么办？} \\
+A: 建议精简标题，模板统一使用单行显示。
+
+\textbf{Q: 编译出错怎么办？} \\
+A: 检查文件路径、确保安装了中文字体（SimSun, SimHei）、检查参考文献bib文件。
+
+\section{更多信息}
+
+\begin{itemize}
+    \item 官方格式要求：请参考学校官网相关模板。
+    \item 技术支持：建议使用 TeX Live 2020+ 环境。
+\end{itemize}
+
+\end{document}

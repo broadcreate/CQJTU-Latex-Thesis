@@ -5,6 +5,27 @@ All notable changes to the cqjtuthesis package will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-02-02
+
+### Changed
+- **CTAN Compliance**: Restructured package for CTAN submission
+  - Reorganized into `tex/`, `source/`, `doc/`, `examples/` directories
+  - Renamed example files: `main.tex` → `cqjtuthesis-bachelor.tex`, etc.
+  - Changed `contents_graduate/` to `contents-graduate/` (hyphen instead of underscore)
+  - Changed `ref/refs.bib` to `bibliography/cqjtuthesis-refs.bib`
+- **Font Management**: Updated to use ctex cross-platform font commands (`\songti`, `\heiti`, etc.)
+- **Single README**: Merged README and README.md into one file
+
+### Added
+- Pre-compiled PDF examples for all 4 thesis types
+- University logo copyright notice (README.md + examples/figures/COPYRIGHT.md)
+- Official CQJTU logo download link and authorization contact
+
+### Removed
+- Duplicate README file
+- Standalone build scripts (Makefile, makewin.bat)
+- MANIFEST-CTAN.txt (integrated into package structure)
+
 ## [1.0.0] - 2026-01-29
 
 ### Added
@@ -84,7 +105,7 @@ This package uses Semantic Versioning:
 ## Reporting Issues
 
 Please report bugs and feature requests at:
-https://github.com/yourusername/CQJTU-Latex-Thesis/issues
+https://github.com/broadcreate/CQJTU-Latex-Thesis/issues
 
 ---
 

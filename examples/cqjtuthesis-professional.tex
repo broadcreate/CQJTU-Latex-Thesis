@@ -1,7 +1,7 @@
 % !TeX encoding = UTF-8
 %% 重庆交通大学专业硕士学位论文 LaTeX 模板示例
 %% =======================================================
-\documentclass[degree=master, degree-type=professional]{cqjtuthesis}
+\documentclass[degree=master, degree-type=professional]{../tex/cqjtuthesis}
 
 % 定义封面信息
 \title{论文题目（一号宋体）}
@@ -38,7 +38,7 @@
 \frontmatter
 
 % 中文摘要
-\input{contents_graduate/abstract}
+\input{contents-graduate/abstract}
 
 % 目录
 \tableofcontents
@@ -47,9 +47,9 @@
 \mainmatter
 
 % 各章节内容  
-\include{contents_graduate/chapter01}
-\include{contents_graduate/chapter02}
-\include{contents_graduate/conclusion}
+\include{contents-graduate/chapter01}
+\include{contents-graduate/chapter02}
+\include{contents-graduate/conclusion}
 
 % 后置部分
 \backmatter
@@ -57,17 +57,17 @@
 % 参考文献
 % 参考文献示例条目（模板演示用，实际写作时可删除）
 \nocite{example,latex_book,phd_example,conf_example,web_example,gb_example,patent_example,tech_example}
-\bibliography{ref/refs}
+\bibliography{bibliography/cqjtuthesis-refs}
 
 % 致谢
-\input{contents_graduate/thanks}
+\input{contents-graduate/thanks}
 
 % 附录
 % 附录为可选部分，如不需要可注释掉以下两行
 \appendix
-\input{contents_graduate/appendix}
+\input{contents-graduate/appendix}
 
 % 攻读学位期间取得的研究成果
-\input{contents_graduate/achievements}
+\input{contents-graduate/achievements}
 
 \end{document}

@@ -2,9 +2,9 @@
 
 重庆交通大学学位论文 LaTeX 模板，支持本科、硕士（学术型/专业型）、博士论文。
 
-**版本**: v1.0  
-**更新日期**: 2026-01-29  
-**编译环境**: XeLaTeX + TeX Live 2025
+**版本**: v1.0.1  
+**更新日期**: 2026-02-02  
+**编译环境**: XeLaTeX + TeX Live 2020+
 
 **格式要求参考**:
 - 本科论文：《重庆交通大学本科毕业论文（设计）模板》（2024年版）
@@ -31,51 +31,51 @@
 
 ### 1. 本科毕业论文
 
-**使用示例文件**: `main.tex`
+**使用示例文件**: `examples/cqjtuthesis-bachelor.tex`
 
 ```latex
-\documentclass{cqjtuthesis}  % 默认为本科模式
+\documentclass{../tex/cqjtuthesis}  % 默认为本科模式
 % 或显式指定
-\documentclass[degree=bachelor]{cqjtuthesis}
+\documentclass[degree=bachelor]{../tex/cqjtuthesis}
 ```
 
-**内容目录**: `contents/`  
-**编译命令**: `xelatex main.tex`
+**内容目录**: `examples/contents/`  
+**编译命令**: `cd examples && xelatex cqjtuthesis-bachelor.tex`
 
 ### 2. 学术型硕士学位论文
 
-**使用示例文件**: `main_master.tex`
+**使用示例文件**: `examples/cqjtuthesis-master.tex`
 
 ```latex
-\documentclass[degree=master]{cqjtuthesis}  % 默认为学术型
+\documentclass[degree=master]{../tex/cqjtuthesis}  % 默认为学术型
 % 或显式指定
-\documentclass[degree=master, degree-type=academic]{cqjtuthesis}
+\documentclass[degree=master, degree-type=academic]{../tex/cqjtuthesis}
 ```
 
-**内容目录**: `contents_graduate/`  
-**编译命令**: `xelatex main_master.tex`
+**内容目录**: `examples/contents-graduate/`  
+**编译命令**: `cd examples && xelatex cqjtuthesis-master.tex`
 
 ### 3. 专业型硕士学位论文
 
-**使用示例文件**: `main_professional.tex`
+**使用示例文件**: `examples/cqjtuthesis-professional.tex`
 
 ```latex
-\documentclass[degree=master, degree-type=professional]{cqjtuthesis}
+\documentclass[degree=master, degree-type=professional]{../tex/cqjtuthesis}
 ```
 
-**内容目录**: `contents_graduate/`  
-**编译命令**: `xelatex main_professional.tex`
+**内容目录**: `examples/contents-graduate/`  
+**编译命令**: `cd examples && xelatex cqjtuthesis-professional.tex`
 
 ### 4. 博士学位论文
 
-**使用示例文件**: `main_doctor.tex`
+**使用示例文件**: `examples/cqjtuthesis-doctor.tex`
 
 ```latex
-\documentclass[degree=doctor]{cqjtuthesis}
+\documentclass[degree=doctor]{../tex/cqjtuthesis}
 ```
 
-**内容目录**: `contents_graduate/`  
-**编译命令**: `xelatex main_doctor.tex`
+**内容目录**: `examples/contents-graduate/`  
+**编译命令**: `cd examples && xelatex cqjtuthesis-doctor.tex`
 
 ---
 
@@ -218,61 +218,60 @@
 ## 文件结构
 
 ```
-CQJTU-Latex-Thesis/
-├── cqjtuthesis.cls              # 模板类文件（核心）
-├── cqjtuthesis.dtx              # 文档化源文件
-├── cqjtuthesis.ins              # 安装脚本
-│
-├── main.tex                     # 本科论文主文件示例
-├── main_master.tex              # 学术硕士论文主文件示例
-├── main_professional.tex        # 专业硕士论文主文件示例
-├── main_doctor.tex              # 博士论文主文件示例
-│
-├── contents/                    # 本科论文内容
-│   ├── abstract.tex            # 中英文摘要
-│   ├── chapter01.tex           # 第一章
-│   ├── chapter02.tex           # 第二章
-│   ├── conclusion.tex          # 结论
-│   ├── thanks.tex              # 致谢
-│   └── appendix.tex            # 附录
-│
-├── contents_graduate/           # 研究生论文内容（硕士+博士）
-│   ├── abstract.tex            # 中英文摘要（含格式说明）
-│   ├── chapter01.tex           # 第一章：绪论（含格式说明）
-│   ├── chapter02.tex           # 第二章：理论基础（含公式示例）
-│   ├── conclusion.tex          # 总结与展望
-│   ├── thanks.tex              # 致谢
-│   └── appendix.tex            # 附录
-│
-├── figures/                     # 图片文件夹
-│   ├── cqjtu-logo-blue.png     # 蓝色校徽
-│   ├── cqjtu-logo-red.png      # 红色校徽
-│   └── cqjtu-logo-legacy.png   # 旧版校徽
-│
-├── ref/                         # 参考文献
-│   └── refs.bib                # BibTeX数据库
-│
-├── README                       # 英文说明
-├── README.md                    # 中文详细说明
+cqjtuthesis/
+├── README.md                    # 说明文件（英文+中文）
 ├── LICENSE                      # 许可证
 ├── CHANGELOG.md                 # 版本记录
-├── USAGE_GUIDE.md              # 使用指南（本文件）
-├── CONTENTS_README.md          # 示例内容说明
-├── DOCS_INDEX.md               # 文档索引
-├── MANIFEST-CTAN.txt           # CTAN上传清单
-├── Makefile                     # Linux/Mac构建脚本
-├── makewin.bat                  # Windows构建脚本
-└── clean-for-ctan.bat          # CTAN打包清理脚本
+│
+├── tex/                         # TeX运行时文件
+│   └── cqjtuthesis.cls         # 模板类文件（核心）
+│
+├── doc/                         # 文档
+│   └── cqjtuthesis-doc-zh.md   # 中文使用指南（本文件）
+│
+└── examples/                    # 示例文件
+    ├── cqjtuthesis-bachelor.tex    # 本科论文示例
+    ├── cqjtuthesis-bachelor.pdf    # 编译后PDF
+    ├── cqjtuthesis-master.tex      # 学术硕士示例
+    ├── cqjtuthesis-master.pdf      # 编译后PDF
+    ├── cqjtuthesis-professional.tex # 专业硕士示例
+    ├── cqjtuthesis-professional.pdf # 编译后PDF
+    ├── cqjtuthesis-doctor.tex      # 博士示例
+    ├── cqjtuthesis-doctor.pdf      # 编译后PDF
+    │
+    ├── contents/                # 本科论文内容
+    │   ├── abstract.tex        # 中英文摘要
+    │   ├── chapter01.tex       # 第一章
+    │   ├── chapter02.tex       # 第二章
+    │   ├── conclusion.tex      # 结论
+    │   ├── thanks.tex          # 致谢
+    │   └── appendix.tex        # 附录
+    │
+    ├── contents-graduate/       # 研究生论文内容（硕士+博士）
+    │   ├── abstract.tex        # 中英文摘要
+    │   ├── chapter01.tex       # 第一章
+    │   ├── chapter02.tex       # 第二章
+    │   ├── conclusion.tex      # 结论
+    │   ├── thanks.tex          # 致谢
+    │   ├── appendix.tex        # 附录
+    │   └── achievements.tex    # 研究成果
+    │
+    ├── figures/                 # 图片文件夹
+    │   ├── cqjtu-logo-blue.png # 蓝色校徽
+    │   └── COPYRIGHT.md        # 校徽版权声明
+    │
+    └── bibliography/            # 参考文献
+        └── cqjtuthesis-refs.bib # BibTeX数据库
 ```
 
 ### 示例文件对照表
 
-| 文件 | 学位类型 | 内容来源 | 封面示例 | 编译页数 |
-|------|---------|---------|---------|---------|
-| `main.tex` | 本科 | `contents/` | 具体示例 | 16页 |
-| `main_master.tex` | 学术硕士 | `contents_graduate/` | 格式说明 | 17页 |
-| `main_professional.tex` | 专业硕士 | `contents_graduate/` | 格式说明 | 17页 |
-| `main_doctor.tex` | 博士 | `contents_graduate/` | 格式说明 | 17页 |
+| 文件 | 学位类型 | 内容来源 | 编译页数 |
+|------|---------|---------|---------|
+| `cqjtuthesis-bachelor.tex` | 本科 | `contents/` | 16页 |
+| `cqjtuthesis-master.tex` | 学术硕士 | `contents-graduate/` | 19页 |
+| `cqjtuthesis-professional.tex` | 专业硕士 | `contents-graduate/` | 19页 |
+| `cqjtuthesis-doctor.tex` | 博士 | `contents-graduate/` | 19页 |
 
 **说明**:
 - 本科论文使用具体示例便于理解
@@ -322,10 +321,10 @@ latexmk -c
 
 根据你的学位类型选择对应的主文件：
 
-- 本科生 → `main.tex`
-- 学术硕士 → `main_master.tex`
-- 专业硕士 → `main_professional.tex`
-- 博士生 → `main_doctor.tex`
+- 本科生 → `examples/cqjtuthesis-bachelor.tex`
+- 学术硕士 → `examples/cqjtuthesis-master.tex`
+- 专业硕士 → `examples/cqjtuthesis-professional.tex`
+- 博士生 → `examples/cqjtuthesis-doctor.tex`
 
 ### 第二步：修改封面信息
 
@@ -341,14 +340,14 @@ latexmk -c
 
 ### 第三步：修改示例内容
 
-- **本科生**: 修改 `contents/` 目录下的文件
-- **研究生**: 修改 `contents_graduate/` 目录下的文件
+- **本科生**: 修改 `examples/contents/` 目录下的文件
+- **研究生**: 修改 `examples/contents-graduate/` 目录下的文件
 
 每个文件的开头都有格式说明注释，请仔细阅读。
 
 ### 第四步：添加参考文献
 
-在 `ref/refs.bib` 文件中添加你的参考文献：
+在 `examples/bibliography/cqjtuthesis-refs.bib` 文件中添加你的参考文献：
 
 ```bibtex
 @article{example2024,
@@ -547,7 +546,7 @@ xelatex main_master.tex
 ### 相关文档
  
 - **示例内容说明**: `CONTENTS_README.md`
-- **官方格式要求**: 请参考项目目录下的官方PDF/Word文件
+- **官方格式要求**: 请参考学校官网相关模板
 
 ### 技术支持
 
@@ -560,11 +559,11 @@ xelatex main_master.tex
 
 ### 版本信息
 
-- **当前版本**: v1.0
-- **更新日期**: 2026-01-29
+- **当前版本**: v1.0.1
+- **更新日期**: 2026-02-02
 - **支持学位**: 本科、学术硕士、专业硕士、博士
 - **编译引擎**: XeLaTeX
-- **依赖**: TeX Live 2025
+- **依赖**: TeX Live 2020+
 
 ### 许可证
 
