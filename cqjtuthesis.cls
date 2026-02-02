@@ -87,10 +87,21 @@
   }
 }
 % 字体设置
-\setmainfont{Times New Roman}
-\setCJKmainfont{SimSun}[AutoFakeBold=2.5,ItalicFont=KaiTi]
-\setCJKsansfont{SimHei}[AutoFakeBold=2.5]
-\setCJKmonofont{FangSong}
+% 使用 ctex 宏包的跨平台字体方案
+% ctex 会根据操作系统自动配置中文字体：
+%   - Windows: 宋体、黑体、楷体、仿宋
+%   - macOS: 华文宋体、华文黑体等
+%   - Linux: Fandol 字体或其他可用字体
+% 使用 \songti, \heiti, \kaishu, \fangsong 命令切换字体
+% 英文主字体设置为 Times New Roman（如不可用则使用系统默认）
+\IfFontExistsTF{Times New Roman}{%
+  \setmainfont{Times New Roman}%
+}{%
+  % 如果 Times New Roman 不可用，使用 TeX Gyre Termes（兼容字体）
+  \IfFontExistsTF{TeX Gyre Termes}{%
+    \setmainfont{TeX Gyre Termes}%
+  }{}%
+}
 \pagestyle{fancy}
 \newcommand\cohort[1]{\def\@cohort{#1}}
 \newcommand\@cohort{}
