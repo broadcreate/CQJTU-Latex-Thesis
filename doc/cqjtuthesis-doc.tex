@@ -23,24 +23,33 @@
     keywordstyle=\color{blue},
     stringstyle=\color{red}
 }
+% 页眉仅显示节标题文本，避免与页码混淆
+\renewcommand{\sectionmark}[1]{\markright{#1}}
 
 \title{\textbf{CQJTU-Latex-Thesis 使用指南}}
 \author{CQJTUThesis Development Team}
-\date{v1.0.1 (2026-02-02)}
+\date{v1.0.2 (2026-02-11)}
 
 \begin{document}
 
+\pagenumbering{gobble}
 \maketitle
+\thispagestyle{empty}
+\clearpage
+\pagenumbering{Roman}
+\setcounter{page}{1}
 \tableofcontents
-\newpage
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
 
 \section{简介}
 
 重庆交通大学学位论文 LaTeX 模板，支持本科、硕士（学术型/专业型）、博士论文。
 
 \begin{itemize}
-    \item \textbf{版本}: v1.0.1
-    \item \textbf{更新日期}: 2026-02-02
+    \item \textbf{版本}: v1.0.2
+    \item \textbf{更新日期}: 2026-02-11
     \item \textbf{编译环境}: XeLaTeX + TeX Live 2020+
 \end{itemize}
 
@@ -63,7 +72,7 @@
 \end{lstlisting}
 
 \textbf{内容目录}: \texttt{examples/contents/} \\
-\textbf{编译命令}: \texttt{cd examples \&\& xelatex cqjtuthesis-bachelor.tex}
+\textbf{编译命令}: \texttt{cd examples \&\& latexmk -xelatex cqjtuthesis-bachelor.tex}
 
 \subsection{学术型硕士学位论文}
 
@@ -76,7 +85,7 @@
 \end{lstlisting}
 
 \textbf{内容目录}: \texttt{examples/contents-graduate/} \\
-\textbf{编译命令}: \texttt{cd examples \&\& xelatex cqjtuthesis-master.tex}
+\textbf{编译命令}: \texttt{cd examples \&\& latexmk -xelatex cqjtuthesis-master.tex}
 
 \subsection{专业型硕士学位论文}
 
@@ -87,7 +96,7 @@
 \end{lstlisting}
 
 \textbf{内容目录}: \texttt{examples/contents-graduate/} \\
-\textbf{编译命令}: \texttt{cd examples \&\& xelatex cqjtuthesis-professional.tex}
+\textbf{编译命令}: \texttt{cd examples \&\& latexmk -xelatex cqjtuthesis-professional.tex}
 
 \subsection{博士学位论文}
 
@@ -98,7 +107,7 @@
 \end{lstlisting}
 
 \textbf{内容目录}: \texttt{examples/contents-graduate/} \\
-\textbf{编译命令}: \texttt{cd examples \&\& xelatex cqjtuthesis-doctor.tex}
+\textbf{编译命令}: \texttt{cd examples \&\& latexmk -xelatex cqjtuthesis-doctor.tex}
 
 \section{选项说明}
 

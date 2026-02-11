@@ -5,6 +5,17 @@ All notable changes to the cqjtuthesis package will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2] - 2026-02-11
+
+### Changed
+- Updated version metadata across documentation and class file to `v1.0.2`.
+- Updated release date across documentation to `2026-02-11`.
+- Refined `doc/cqjtuthesis-doc.tex` page numbering:
+  - Cover page has no page number.
+  - Front matter (table of contents) uses Roman numerals.
+  - Main content restarts with Arabic page number `1`.
+- Refined `doc/cqjtuthesis-doc.tex` header mark display to avoid confusion between heading index and page number.
+
 ## [1.0.1] - 2026-02-02
 
 ### Changed

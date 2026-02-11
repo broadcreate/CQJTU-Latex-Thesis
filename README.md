@@ -4,7 +4,7 @@
 It supports bachelor's, academic master's, professional master's, and doctoral theses,
 following the official format requirements.
 
-**Version:** v1.0.1 (2026-02-02)
+**Version:** v1.0.2 (2026-02-11)
 
 ## Features
 
